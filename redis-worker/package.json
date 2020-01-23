@@ -1,0 +1,12 @@
+{
+  "name": "redis-worker-fib",
+  "version": "1.0.0",
+  "dependencies": {
+    "nodemon": "2.0.2",
+    "redis": "2.8.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon"
+  }
+}
