@@ -1,7 +1,7 @@
 FROM node:alpine
 WORKDIR '/app'
 
-COPY ./fib-client/package.json .
+COPY ./fib-client/package.json ./
 RUN yarn install
 COPY . .
 
