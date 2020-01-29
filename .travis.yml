@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t lalo/react-test -f ./fib-client/Dockerfile.dev ./fib-client
+  - docker build -t lalo/fib-client-tests -f ./fib-client/Dockerfile.dev ./fib-client
 
 script:
-  - docker run -e CI=true lalo/react-test yarn test --coverage
+  - docker run -e CI=true lalo/fib-client-tests yarn test --coverage
 
 after_success:
   - docker build -t lalo/multi-fib-client ./fib-client
