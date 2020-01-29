@@ -18,7 +18,7 @@ after_success:
 # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login docker.io -u "$DOCKER_ID" --password-stdin
 # Take those images and push them to docker hub
-  - docker push edlalo/multi-fib-client
-  - docker push edlalo/multi-nginx
-  - docker push edlalo/multi-redis-worker
-  - docker push edlalo/multi-server
+  - docker push -t edlalo/multi-fib-client ./fib-client
+  - docker push -t edlalo/multi-nginx ./nginx
+  - docker push -t edlalo/multi-redis-worker ./redis-worker
+  - docker push -t edlalo/multi-server ./server
